@@ -1,0 +1,95 @@
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #2c3e50;
+  }
+  
+  /* Employee Cards */
+  .employee-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .employee-card:hover {
+    transform: scale(1.02);
+  }
+  
+  .employee-info {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .employee-info h3 {
+    font-size: 1.6rem;
+    color: #34495e;
+  }
+  
+  .eligible-tag {
+    background-color: #2ecc71;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .not-eligible-tag {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Reviews Section */
+  .reviews-section {
+    margin-top: 20px;
+  }
+  
+  .review-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .reviewer-name {
+    color: #3498db;
+  }
+  
+  .rating {
+    color: #f39c12;
+  }
+  
+  .review-feedback {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #7f8c8d;
+    margin-bottom: 15px;
+  }
+  
+  /* No Reviews Section */
+  .no-reviews {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #95a5a6;
+  }
+  

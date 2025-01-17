@@ -1,0 +1,25 @@
+<div class="container"> 
+    <h2 class="title">Submit Feedback</h2>
+  
+    <div *ngIf="!isEligible" class="not-eligible">
+      <p>You are not eligible to submit a review.</p>
+    </div>
+  
+    <div *ngIf="isEligible">
+      <!-- Loop through the employees and create a form for each one -->
+      <div *ngFor="let employee of employees" class="employee-feedback-card">
+        <form [formGroup]="reviewForm" (ngSubmit)="submitReview(employee)" class="review-form">
+          <h3 class="employee-name">Review for {{ employee.name }}</h3>
+          
+          <label for="comment-{{ employee.id }}" class="form-label">Your Feedback:</label>
+          <textarea id="comment-{{ employee.id }}" formControlName="comment" rows="4" placeholder="Write your feedback here..." required></textarea>
+          
+          <div *ngIf="reviewForm.controls['comment'].invalid && reviewForm.controls['comment'].touched" class="error-message">
+            <p>Feedback must be at least 5 characters long.</p>
+          </div>
+  
+          <button type="submit" [disabled]="reviewForm.invalid" class="submit-btn">Submit Review</button>
+        </form>
+      </div>
+    </div>
+</div>

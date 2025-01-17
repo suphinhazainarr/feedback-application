@@ -1,0 +1,45 @@
+<div class="manage-employees-container">
+  <h2 class="title">Manage Employees</h2>
+
+  <!-- Add Employee Form -->
+  <div class="form-container">
+    <h3 class="form-title">Add New Employee</h3>
+    <form (ngSubmit)="addEmployee()" class="employee-form">
+      <input [(ngModel)]="newEmployee.name" name="name" placeholder="Name" required class="input-field"/>
+      <input [(ngModel)]="newEmployee.position" name="position" placeholder="Position" required class="input-field"/>
+      <select [(ngModel)]="newEmployee.role" name="role" class="input-field">
+        <option value="employee">Employee</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <!-- Add Eligibility For Reviewing Field -->
+      <label for="eligibleForReviewing" class="form-label">Eligible for Reviewing:</label>
+      <select [(ngModel)]="newEmployee.eligibleForReviewing" name="eligibleForReviewing" class="input-field">
+        <option value="true">True</option>
+        <option value="false">False</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Add Employee</button>
+    </form>
+  </div>
+
+  <!-- List of Employees -->
+  <div class="employee-list">
+    <ul>
+      <li *ngFor="let employee of employees" class="employee-item">
+        <div *ngIf="editingEmployeeId === employee._id; else viewMode">
+          <input type="text" [(ngModel)]="editedName" class="input-field"/>
+          <input type="text" [(ngModel)]="editedPosition" class="input-field"/>
+          <button (click)="saveEmployee(employee._id)" class="action-btn">Save</button>
+          <button (click)="cancelEdit()" class="action-btn cancel-btn">Cancel</button>
+        </div>
+
+        <ng-template #viewMode>
+          <span class="employee-details">{{ employee.name }} - {{ employee.position }}</span>
+          <button (click)="editEmployee(employee)" class="action-btn edit-btn">Edit</button>
+          <button (click)="deleteEmployee(employee._id)" class="action-btn delete-btn">Delete</button>
+        </ng-template>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="employee-dashboard-container">
+    <h2 class="dashboard-heading">Employee Dashboard</h2>
+    
+    <!-- Navigation links to child components -->
+    <nav class="dashboard-nav">
+      <ul class="nav-list">
+        <li><a routerLink="./assigned-reviews" routerLinkActive="active" class="nav-item">Assigned Reviews</a></li>
+        <li><a routerLink="./feedback-submission" routerLinkActive="active" class="nav-item">Submit Feedback</a></li>
+      </ul>
+    </nav>
+    
+    <!-- Router outlet to display the child components -->
+    <router-outlet></router-outlet>
+  </div>
+  

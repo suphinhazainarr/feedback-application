@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Assign Reviewers</h2>
+  
+    <div class="employee-list">
+      <h3>Employees</h3>
+      <ul>
+        <li *ngFor="let employee of employees">
+          <span>{{ employee.name }} ({{ employee.position }})</span>
+  
+          <button (click)="toggleEligibility(employee)"
+                  [ngClass]="{
+                    'eligible': employee.eligibleForReview,
+                    'not-eligible': !employee.eligibleForReview
+                  }">
+            {{ employee.eligibleForReview ? 'Eligible ✅' : 'Not Eligible ❌' }}
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  

@@ -1,0 +1,11 @@
+<h2>Signup</h2>
+<form (ngSubmit)="signup()">
+  <input [(ngModel)]="name" name="name" placeholder="Name" required />
+  <input [(ngModel)]="password" name="password" type="password" placeholder="Password" required />
+  <input [(ngModel)]="position" name="position" placeholder="Position" required />
+  <select [(ngModel)]="role" name="role">
+    <option value="employee">Employee</option>
+    <option value="admin">Admin</option>
+  </select>
+  <button type="submit">Signup</button>
+</form>

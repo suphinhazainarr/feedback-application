@@ -1,0 +1,163 @@
+/* Main container styling */
+.manage-reviews-container {
+  background: linear-gradient(145deg, #f3f4f7, #ffffff);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 1100px;
+  margin: 50px auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Employee reviews styling */
+.employee-reviews {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.employee-name {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+}
+
+/* Reviews list styling */
+.reviews-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-comment {
+  font-size: 1rem;
+  color: #333;
+  flex: 1;
+}
+
+/* Input field for editing review */
+.input-field {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 60%;
+  margin-right: 10px;
+}
+
+.input-field:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Button styling */
+.action-btn {
+  padding: 8px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #ffa500;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e08500;
+}
+
+.save-btn {
+  background-color: #4caf50;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #45a049;
+}
+
+.cancel-btn {
+  background-color: #999;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #666;
+}
+
+.delete-btn {
+  background-color: #ff3333;
+  color: white;
+  margin-left: 10px;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+/* Add review button styling */
+.add-review-btn {
+  padding: 12px 30px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto;
+}
+
+.add-review-btn:hover {
+  background-color: #5947e2;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .manage-reviews-container {
+    padding: 20px;
+  }
+
+  .input-field {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .action-btn {
+    font-size: 0.9rem;
+    padding: 6px 16px;
+  }
+
+  .employee-name {
+    font-size: 1.4rem;
+  }
+}

@@ -1,0 +1,174 @@
+/* Main container styling */
+.manage-employees-container {
+  background: linear-gradient(145deg, #f3f4f7, #ffffff);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 1100px;
+  margin: 50px auto;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Title styling */
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+/* Form container styling */
+.form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.form-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* Form styling */
+.employee-form {
+  display: grid;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Input fields and select styling */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Form label styling */
+.form-label {
+  font-weight: 500;
+  color: #555;
+}
+
+/* Button styling */
+.submit-btn {
+  padding: 12px 30px;
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #5947e2;
+}
+
+/* Employee list styling */
+.employee-list {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.employee-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.employee-item:last-child {
+  border-bottom: none;
+}
+
+.employee-details {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Action buttons styling */
+.action-btn {
+  padding: 6px 18px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+  background-color: #ffa500;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e08500;
+}
+
+.delete-btn {
+  background-color: #ff3333;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+.cancel-btn {
+  background-color: #999;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #666;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .manage-employees-container {
+    padding: 20px;
+  }
+
+  .employee-form {
+    max-width: 100%;
+  }
+
+  .input-field {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+  }
+
+  .employee-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .employee-details {
+    margin-bottom: 10px;
+  }
+}

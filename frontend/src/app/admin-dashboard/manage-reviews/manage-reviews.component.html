@@ -1,0 +1,26 @@
+<div class="manage-reviews-container">
+  <h2 class="title">Manage Employee Reviews</h2>
+
+  <div *ngFor="let employee of employees" class="employee-reviews">
+    <h3 class="employee-name">{{ employee.name }} ({{ employee.position }})</h3>
+
+    <ul class="reviews-list">
+      <li *ngFor="let review of employee.reviews" class="review-item">
+        <div *ngIf="editingReview?.reviewId !== review._id; else editReviewMode">
+          <span class="review-comment">{{ review.comment }}</span>
+          <button (click)="editReview(employee._id, review._id, review.comment)" class="action-btn edit-btn">Edit</button>
+        </div>
+
+        <ng-template #editReviewMode>
+          <input [(ngModel)]="editedReviewText" class="input-field" />
+          <button (click)="saveReview(employee._id, review._id)" class="action-btn save-btn">Save</button>
+          <button (click)="cancelEdit()" class="action-btn cancel-btn">Cancel</button>
+        </ng-template>
+
+        <button (click)="deleteReview(employee._id, review._id)" class="action-btn delete-btn">Delete</button>
+      </li>
+    </ul>
+
+    <button (click)="addReview(employee._id)" class="add-review-btn">Add Review</button>
+  </div>
+</div>
